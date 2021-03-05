@@ -1,0 +1,40 @@
+<script>
+
+  fetch("https://tasty.p.rapidapi.com/tags/list", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": "463ceaef41mshbe6777dc8767300p1b3c10jsn02b700a1b028",
+		"x-rapidapi-host": "tasty.p.rapidapi.com"
+	}
+})
+.then(response => response.text()).then(response => document.write(response))
+.catch(err => {
+	console.error(err);
+});
+var response = http.response;
+
+try{
+    var json = JSON.stringify(response);
+    logInfo("status: " + json.status);
+  } catch(e) { logInfo(e); }
+  function get_json(){
+
+
+  }
+  //prendi name 
+  const name_result = JSON.stringify(result(JSON.stringify(name)));
+  console.log(typeof name_result );
+ const json_name_result = JSON.parse(name_result);
+ console.log(typeof json_name_result);
+ console.log(json_name_result.name);
+
+ //prendi url
+ const url_result = JSON.stringify(result(JSON.stringify(url)));
+  console.log(typeof url_result );
+  //localStorage.setItem('name',name_result);
+ const json_url_result = JSON.parse(url_result);
+ console.log(typeof json_url_result);
+ console.log(json_url_result.url);
+
+</script>
+
